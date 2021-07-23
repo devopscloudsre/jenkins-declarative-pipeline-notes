@@ -10,15 +10,20 @@ pipeline {
     stages {
         stage ('Compile Stage') {
 
+            when {
+                 branch 'dev'             
+              }
+
             steps {
-           
-                    sh 'mvn clean compile'
-            
+                    sh 'mvn clean package'
             }
         }
 
         stage ('Testing Stage') {
-
+             when {
+                  branch 'release'             
+              }
+            
             steps {
               
                     sh 'mvn test'
@@ -28,8 +33,12 @@ pipeline {
 
 
         stage ('Install Stage') {
+            when {
+                  branch 'main'             
+              }
+            
             steps {
-             
+              
                     sh 'mvn install'
              
             }
