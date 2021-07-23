@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Welcome Step') {
             steps { 
-                echo 'Welcome to LambdaTest'
+                echo 'Welcome to Class'
             }
         }
     }
@@ -219,7 +219,7 @@ pipeline {
     environment name: 'DEPLOY_TO', value: 'production'
 }
             steps {
-                echo 'Welcome to LambdaTest'
+                echo 'Welcome to Class'
             }
         }
     }
@@ -243,7 +243,7 @@ pipeline {
                 }
             }
             steps {
-                echo 'Welcome to LambdaTest'
+                echo 'Welcome to Class'
             }
         }
     }
@@ -267,7 +267,7 @@ pipeline {
                 }
             }
             steps {
-                echo 'Welcome to LambdaTest'
+                echo 'Welcome to Class'
             }
         }
     }
