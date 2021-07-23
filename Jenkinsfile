@@ -4,7 +4,7 @@ pipeline {
 stage('Build') {
     steps {
         echo 'Pulling...' + env.BRANCH_NAME
-        checkout scm
+       echo "hello world"
         
     }
 }
