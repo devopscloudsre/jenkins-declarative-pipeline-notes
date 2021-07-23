@@ -6,11 +6,23 @@ pipeline {
         // Install the Maven version configured as "M3" and add it to the path.
         maven "maven"
     }
+    
+     environment { 
+            mybranch = env('BRANCH_NAME') 
+    }
+
 
     stages {
-        stage ('Compile Stage') {
 
+         stage ('branch name') {
+            steps {
+                    echo $mybranch
+            }
+        }
+        
+        stage ('Compile Stage') {
             when {
+                
                    expression {
                        return env.BRANCH_NAME == 'dev';}
           
