@@ -11,7 +11,9 @@ pipeline {
         stage ('Compile Stage') {
 
             when {
-                 branch 'dev'             
+                   expression {
+                       return env.BRANCH_NAME == 'dev';}
+          
               }
 
             steps {
